@@ -1,12 +1,12 @@
 import discord
 import asyncio
 import random
+import os
 
  
 client = discord.Client()
  
 # 생성된 토큰을 입력해준다.
-token = "NjY2MjkzMjk5MjI0NzcyNjA5.Xhyv-A.Ry7P78sTan8gDKq4CpvoLCu78HQ"
 
 
 
@@ -172,5 +172,5 @@ async def on_message(message):
             channel = message.channel
             await channel.send('주인님 바빠요(혹시 자고있을지도..)')
     
-
-client.run(token)
+acces_token = os.environ["BOT_TOKEN"]
+client.run(acces_token)
